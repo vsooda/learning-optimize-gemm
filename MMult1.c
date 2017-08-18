@@ -14,8 +14,8 @@ void MY_MMult( int m, int n, int k, double *a, int lda,
 {
   int i, j;
 
-  for ( i=0; i<m; i++ ){        /* Loop over the rows of C */
-    for ( j=0; j<n; j++ ){        /* Loop over the columns of C */
+  for ( j=0; j<n; j++ ){        /* Loop over the columns of C */
+    for ( i=0; i<m; i++ ){        /* Loop over the rows of C */
       /* Update C( i,j ) with the inner
          product of the ith row of A and
          the jth column of B */
