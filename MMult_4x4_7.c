@@ -81,25 +81,25 @@ void AddDot4x4(int k, double* a, int lda, double *b, int ldb,
     b_p2_ptr = &B(p,2);
     b_p3_ptr = &B(p,3);
 
-    c_00_reg += A(0,p) * *b_p0_ptr;
-    c_01_reg += A(0,p) * *b_p1_ptr;
-    c_02_reg += A(0,p) * *b_p2_ptr;
-    c_03_reg += A(0,p) * *b_p3_ptr;
+    c_00_reg += a_0p_reg * *b_p0_ptr;
+    c_01_reg += a_0p_reg * *b_p1_ptr;
+    c_02_reg += a_0p_reg * *b_p2_ptr;
+    c_03_reg += a_0p_reg * *b_p3_ptr;
 
-    c_10_reg += A(1,p) * *b_p0_ptr;
-    c_11_reg += A(1,p) * *b_p1_ptr;
-    c_12_reg += A(1,p) * *b_p2_ptr;
-    c_13_reg += A(1,p) * *b_p3_ptr;
+    c_10_reg += a_1p_reg * *b_p0_ptr;
+    c_11_reg += a_1p_reg * *b_p1_ptr;
+    c_12_reg += a_1p_reg * *b_p2_ptr;
+    c_13_reg += a_1p_reg * *b_p3_ptr;
 
-    c_20_reg += A(2,p) * *b_p0_ptr;
-    c_21_reg += A(2,p) * *b_p1_ptr;
-    c_22_reg += A(2,p) * *b_p2_ptr;
-    c_23_reg += A(2,p) * *b_p3_ptr;
+    c_20_reg += a_2p_reg * *b_p0_ptr;
+    c_21_reg += a_2p_reg * *b_p1_ptr;
+    c_22_reg += a_2p_reg * *b_p2_ptr;
+    c_23_reg += a_2p_reg * *b_p3_ptr;
 
-    c_30_reg += A(3,p) * *b_p0_ptr++;
-    c_31_reg += A(3,p) * *b_p1_ptr++;
-    c_32_reg += A(3,p) * *b_p2_ptr++;
-    c_33_reg += A(3,p) * *b_p3_ptr++;
+    c_30_reg += a_3p_reg * *b_p0_ptr++;
+    c_31_reg += a_3p_reg * *b_p1_ptr++;
+    c_32_reg += a_3p_reg * *b_p2_ptr++;
+    c_33_reg += a_3p_reg * *b_p3_ptr++;
   }
   C(0,0) += c_00_reg;
   C(0,1) += c_01_reg;
