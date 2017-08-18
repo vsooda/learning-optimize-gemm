@@ -23,10 +23,10 @@ void MY_MMult( int m, int n, int k, double *a, int lda,
                                     double *b, int ldb,
                                     double *c, int ldc )
 {
-  int i, j, p, pb, ib;
+  int i, p, pb, ib;
   /* This time, we compute a mc x n block of C by a call to the InnerKernel */
 
-  for (j=0; j<k; j+=kc) {
+  for (p=0; p<k; p+=kc) {
     pb = min(k-p, kc);
     for (i=0; i<m; i+=mc) {
       ib = min(m-i, mc);
